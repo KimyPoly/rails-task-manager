@@ -1,0 +1,12 @@
+<div class="d-flex flex-column align-items-center justify-content-center" style="background-color:white; height: 50%; width: 60%;">
+  <h1>My Tasks</h1>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+  <div class="border border-2">
+  <i class="fa-solid fa-plus"></i>
+  <%= link_to "Add new task", 'tasks/new' %>
+  </div>
+</div>
